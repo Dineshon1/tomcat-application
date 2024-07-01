@@ -3,79 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenkins Website</title>
+    <title>Document</title>
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family:'poppins',sans-serif;
         }
-        .container {
+        body{
             width: 100%;
+            min-height: 100vh;
+            background: url(img/desk.jpg);
+            background-size: cover;
+            background-position: center;
+            background-position: no-repeat;
+            
+
+        }
+        .contact-us{
+            box-shadow:0px 10px 20px rgba(0,0,0,0.5);
+            width: 85%;
             max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #eee;
+            text-align: center;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 20px 40px;
+            border-radius: 5px;
+            
+        }
+        .form{
+            border: 1px solid #a9a9a9;
+            margin: 7px 0px;
+            padding: 4px 20px;
             border-radius: 8px;
         }
-        h1 {
-            text-align: center;
-            color: #333;
+        .contact-us h1{
+            font-weight: 700;
+            margin-top: 0px;
         }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
+        .form label{
+            font-size: 13px;
+            color: #000;
+            text-align: left;
+            text-transform: uppercase;
             display: block;
-            margin-bottom: 5px;
-            color: #555;
         }
-        input[type="text"],
-        input[type="password"],
-        input[type="search"] {
+        
+        .form input,textarea{
+            
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
+            font-size: 19px;
+            margin-top: 5px;
+            background: none;
+            outline: none;
             border: none;
-            border-radius: 4px;
-            cursor: pointer;
+
         }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
+        .button{
+            width: 100%;
+            font-size: 18px;
+            color: #fff;
+            display: inline-block;
+            background-color: #f24962;
+            padding: 14px 0px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-top: 8px;
+
         }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Jenkins Website</h1>
-        <form action="/login" method="post">
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+    <div class="contact-us">
+        <h1>contact us</h1>
+        <div class="form">
+            <div class="form">
+                <label>Full Name :</label>
+                <input type="text" name="value" placeholder="Enter Your Name">
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login">
-            </div>
-        </form>
-        <form action="/search" method="get">
-            <div class="form-group">
-                <label for="search">Search</label>
-                <input type="search" id="search" name="q" placeholder="Search..." required>
-            </div>
-        </form>
+           <div class="form">
+                <label>Email :</label>
+                <input type="email" name="value" placeholder="Enter Your Email">
+           </div>
+           <div class="form">
+            <label>Phone Number :</label>
+                <input type="text" name="value" placeholder="Enter Your Phone Number">    
+           </div>
+           <div class="form">
+            <label>Message</label>
+                <textarea></textarea>
+           </div>
+            
+
+            <a href="" class="button">Send</a>
+
+        </div>
+
     </div>
 </body>
 </html>
